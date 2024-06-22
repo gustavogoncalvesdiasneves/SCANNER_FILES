@@ -15,7 +15,7 @@ def count_files_in_folder(folder):
 
 def generate_file_explorer_html(folder):
     if not os.path.isdir(folder):
-        return f'O caminho "{folder}" não é uma pasta válida.'
+        return f'The path "{folder}" is not valid.'
     
     html = '<ul>'
     html += f'<li><span class="folder" onclick="toggleFolder(this)">&#128193; {os.path.basename(folder)} ({count_folders_in_folder(folder)} pastas, {count_files_in_folder(folder)} arquivos)</span>'
@@ -78,7 +78,7 @@ def explore_folder():
         html_file.write(html_content)
     
     print("File 'file_explorer.html' generated sucess.")
-    log_text.insert('end', f"HTML gerado em: {os.path.abspath('file_explorer.html')}\n")
+    log_text.insert('end', f"HTML genrated in: {os.path.abspath('file_explorer.html')}\n")
 
 def open_in_browser():
     webbrowser.open("file_explorer.html")
