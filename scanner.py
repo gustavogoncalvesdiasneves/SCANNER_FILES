@@ -26,7 +26,7 @@ def generate_file_explorer_html(folder):
         if os.path.isdir(item_path):
             html += f'<li>{generate_file_explorer_html(item_path)}</li>'  # Ajuste aqui
         else:
-            html += f'<li><span>&#128462; {item} (arquivo)</span></li>'
+            html += f'<li><span>&#128462; {item} (file)</span></li>'
 
     html += '</ul></li>'
     html += '</ul>'
@@ -45,7 +45,7 @@ def explore_folder():
                 margin-right: 5px;
             }}
             .file:before {{
-                content: "\\1F4C4"; /* Ícone para arquivo */
+                content: "\\1F4C4"; /* Ícon for file */
                 display: inline-block;
                 margin-right: 5px;
             }}
@@ -62,11 +62,11 @@ def explore_folder():
                 if (ul.style.display === 'none') {{
                     ul.style.display = 'block';
                     folder.classList.add('open');
-                    folder.classList.add('selected');  // Adiciona a classe .selected à pasta clicada
+                    folder.classList.add('selected');  // add this clas if .selected folder
                 }} else {{
                     ul.style.display = 'none';
                     folder.classList.remove('open');
-                    folder.classList.remove('selected');  // Remove a classe .selected da pasta clicada
+                    folder.classList.remove('selected');  // remove the class .selected
                 }}
             }}
         </script>
@@ -77,19 +77,19 @@ def explore_folder():
     with open("file_explorer.html", "w", encoding="utf-8") as html_file:
         html_file.write(html_content)
     
-    print("Arquivo file_explorer.html gerado com sucesso.")
+    print("File 'file_explorer.html' generated sucess.")
     log_text.insert('end', f"HTML gerado em: {os.path.abspath('file_explorer.html')}\n")
 
 def open_in_browser():
     webbrowser.open("file_explorer.html")
 
 root = Tk()
-root.title("Explorador de Arquivos")
+root.title("Files Explorer")
 
-label = Label(root, text="Selecione a pasta:")
+label = Label(root, text="Select Folder:")
 label.pack()
 
-button = Button(root, text="Explorar", command=explore_folder)
+button = Button(root, text="Search", command=explore_folder)
 button.pack()
 
 log_label = Label(root, text="Logs:")
@@ -103,7 +103,7 @@ scrollbar.pack(side='right', fill='y')
 
 log_text.config(yscrollcommand=scrollbar.set)
 
-open_button = Button(root, text="Abrir HTML no navegador", command=open_in_browser)
+open_button = Button(root, text="Open HTML in Brownser", command=open_in_browser)
 open_button.pack()
 
 root.mainloop()
