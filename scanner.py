@@ -18,7 +18,7 @@ def generate_file_explorer_html(folder):
         return f'The path "{folder}" is not valid.'
     
     html = '<ul>'
-    html += f'<li><span class="folder" onclick="toggleFolder(this)">&#128193; {os.path.basename(folder)} ({count_folders_in_folder(folder)} pastas, {count_files_in_folder(folder)} arquivos)</span>'
+    html += f'<li><span class="folder" onclick="toggleFolder(this)">&#128193; {os.path.basename(folder)} ({count_folders_in_folder(folder)} folders, {count_files_in_folder(folder)} files)</span>'
     html += '<ul style="display: none;">'
 
     for item in os.listdir(folder):
