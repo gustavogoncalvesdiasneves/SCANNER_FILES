@@ -1,5 +1,11 @@
 ### Project: File Explorer with Graphical Interface in Python
 
+
+<br/>
+<p align="start">
+<img style="margin:auto" src="images/SCANNER_FILES.png" width="80%" />
+<p />
+
 **Description:**
 
 This project creates a file explorer application using Python, with a graphical interface via Tkinter, to navigate and visualize the structure of folders and files. It generates an HTML preview of the selected directory structure, which can be opened in the browser.
