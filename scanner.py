@@ -1,5 +1,6 @@
 import os
 import webbrowser
+#sudo apt-get install python3-tk
 from tkinter import Tk, Button, Label, filedialog, Text, Scrollbar
 
 def count_folders_in_folder(folder):
